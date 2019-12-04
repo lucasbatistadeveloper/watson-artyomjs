@@ -7,13 +7,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static('./public'));
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const assistant = new AssistantV1({
-  username: 'apikey',
-  password: 'opa3XZK9s7AsyO0GyXsv9iM1T9zJI1lDK6aLuuuwc6Ht',
-  url: 'https://gateway.watsonplatform.net/assistant/api',
-  version: '2019-07-28',
+  username: '',
+  password: '',
+  url: '',
+  version: '',
 });
 
 app.post('/conversation/', (req, res) => {
@@ -21,7 +21,7 @@ app.post('/conversation/', (req, res) => {
 
   const params = {
     input: { text },
-    workspace_id: 'bfd9ca0d-ad5e-414a-a382-72d80a4aa961',
+    workspace_id: '',
     context,
   };
 
