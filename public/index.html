@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>Watson Sample Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./artyom.min.js"></script>
+</head>
+
+<body>
+  <div class="chat-column">
+    <div id="chat"></div>
+      <input type="button" onclick="main()" value="Start Microfone"/> 
+  </div>
+  <script src="./script.js"></script>
+  <script>
+    // Add a single command
+    var command = {
+        indexes:["Oi","Boa noite","Ei", "Boa tarde", "Bom dia"], 
+        action:function(){ 
+        }
+      };
+      artyom.addCommands(command);
+      artyom.redirectRecognizedTextOutput(function(text, isFinal){
+          textVoz(text, isFinal);
+      });
+    function main() {
+        artyom.initialize({
+            lang:"pt-BR",
+            continuous:false,
+            debug:true,
+            listen:true
+        });
+      }
+  </script>
+  
+</body>
+
+</html>

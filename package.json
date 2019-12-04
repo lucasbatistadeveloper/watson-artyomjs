@@ -1,0 +1,30 @@
+{
+  "name": "watson-sample-chatbot",
+  "version": "1.0.0",
+  "description": "A simple chatbot using IBM Watson and Node.js",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.17.1",
+    "watson-developer-cloud": "^3.18.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leocardoso94/watson-sample-chatbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Leocardoso94/watson-sample-chatbot/issues"
+  },
+  "homepage": "https://github.com/Leocardoso94/watson-sample-chatbot#readme"
+}
